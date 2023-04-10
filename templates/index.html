@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <ol class="container-fluid" id="sortablelist">
+        {% for note in notes %}
+            <li>
+                <div class="p">
+                    <button class="icon-btn del"><i class="fa-sharp fa-solid fa-trash del-ico"></i></button>
+                    <a href="/edit/note?note={{ note.key }}" methods="get" class="nav-link">
+                        <h1 class="notetitle">{{ note.key }}</h1>
+                        <p class="notedesc">{{ note.description }}</p>
+                    </a>
+                </div>
+            </li>
+        {% endfor %}
+    </ol>
+</body>
