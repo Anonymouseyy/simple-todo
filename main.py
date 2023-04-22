@@ -10,7 +10,7 @@ app = Flask(__name__)
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-base = Base("todos")
+todos = Base("todos")
 
 # Ensure responses aren't cached
 @app.after_request
@@ -25,4 +25,17 @@ def after_request(response):
 def index():
     """Home Page"""
 
-    return render_template("index.html")
+    items = todos.fetch().items
+    items.sort(key=lambda x: x["order"])
+
+    return render_template("index.html", todos=items)
+
+
+@app.route("/create", methods=["GET", "POST"])
+def create():
+    if request.form.get("name") and request.form.get("desc"):
+        todos.put({"desc": request.form.get("desc"),
+                   "order": 0}, request.form.get("name"))
+        return redirect("/")
+    else:
+        return 504

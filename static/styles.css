@@ -19,10 +19,30 @@ body {
     padding: 0px;
 }
 
+.p {
+    padding: 10px;
+}
+
+.todoname {
+    display: inline-block;
+    text-align: left;
+    font-size: 3vh;
+    width: auto;
+    margin: 0;
+}
+
+.tododesc {
+    display: inline-block;
+    text-align: left;
+    color: white;
+    font-size: 2vh;
+    width: auto;
+    margin: 0;
+}
+
 .del {
-    position: absolute;
-    top: 5%;
-    left: 90%;
+    color: white;
+    display: inline-block;
 }
 
 .del-ico:hover {
