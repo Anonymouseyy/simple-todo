@@ -10,7 +10,7 @@ app = Flask(__name__)
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
-# base = Base("todos")
+base = Base("todos")
 
 # Ensure responses aren't cached
 @app.after_request
