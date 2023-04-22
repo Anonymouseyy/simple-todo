@@ -48,12 +48,17 @@ h1 {
 
 .new-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 10vw;
-    height: 10vw;
-    color: #73AD21;
-    border: 3px solid white;
+    bottom: 10vh;
+    right: 10vh;
+    width: 5vw;
+    height: 5vw;
+    background-color: #40444b;
+    border-radius: 25px;
+    border: none;
+}
+
+.new-btn:hover {
+    background-color: #73AD21;
 }
 
 /* Change styles for cancel button and delete button on extra small screens */
@@ -81,13 +86,13 @@ h1 {
 }
 
 .cancelbtn:hover,
-.deletebtn:hover {
+.submitbtn:hover {
     opacity: 1;
 }
 
 /* Float cancel and delete buttons and add an equal width */
 .cancelbtn,
-.deletebtn {
+.submitbtn {
     float: left;
     width: 50%;
     background-color: #04AA6D;
@@ -107,7 +112,7 @@ h1 {
 }
 
 /* Add a color to the delete button */
-.deletebtn {
+.submitbtn {
     background-color: #73AD21;
 }
 
@@ -133,16 +138,14 @@ h1 {
     /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
-    background-color: #474e5d;
+    background-color: #2f3136;
     padding-top: 50px;
 }
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fefefe;
+    background-color: #40444b;
     margin: 5% auto 15% auto;
-    /* 5% from the top,15% from the bottom and centered */
-    border: 1px solid #888;
     width: 80%;
     /* Could be more or less,depending on screen size */
 }
