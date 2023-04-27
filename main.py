@@ -1,8 +1,5 @@
-from flask import Flask, flash, redirect, render_template, request, session, jsonify
-from jinja2.utils import markupsafe
-from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
-from werkzeug.security import check_password_hash, generate_password_hash
-from deta import Base, Drive
+from flask import Flask, redirect, render_template, request
+from deta import Base
 
 # Configure application
 app = Flask(__name__)
