@@ -32,7 +32,20 @@ def index():
 @app.route("/create", methods=["GET", "POST"])
 def create():
     if request.form.get("name") and request.form.get("desc"):
-        todos.put({"desc": request.form.get("desc")}, request.form.get("name"))
+        try:
+            todos.put({"desc": request.form.get("desc")}, request.form.get("name"))
+        except:
+            return 500
         return redirect("/")
     else:
-        return 504
+        return 400
+
+
+@app.route("/delete", methods=["GET"])
+def delete():
+    try:
+        todos.delete(request.args.get("todo"))
+        return redirect("/")
+    except:
+        return 500
+
