@@ -38,21 +38,17 @@ body {
     font-size: 2vh;
     width: auto;
     margin: 0;
-    margin-left: 2px;
+    margin-left: 5px;
 }
 
 .del {
-    margin-left: 2px;
+    margin-left: 5px;
     color: white;
     display: inline-block;
 }
 
 .del-ico:hover {
     color: #bc3c3c;
-}
-
-li {
-    margin-bottom: 2px;
 }
 
 h1 {
