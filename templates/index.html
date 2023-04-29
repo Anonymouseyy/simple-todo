@@ -23,7 +23,7 @@
 
     <ol class="container-fluid" id="sortablelist">
         {% for todo in todos %}
-            <li style="display: block; background-color: #40444b; width: 80%; margin: 0 auto 10px auto; border-radius: 10px;">
+            <li class="todo">
                 <div class="p">
                     <h1 class="todoname">{{ todo.key }}</h1>
                     <p class="tododesc">{{ todo.desc }}</p>
@@ -41,8 +41,8 @@
             <div class="container">
                 <h1 style="color: white;">New</h1>
 
-                <input autocomplete="off" autofocus class="form-control" name="name" placeholder="Todo Name" type="text" style="width: 100%; margin-bottom:1%;">
-                <textarea class="form-control" name="desc" placeholder="Description" rows="6" style="overflow-x: hidden; overflow-y: auto; width: 100%;"></textarea>
+                <input autocomplete="off" autofocus class="form-control name" name="name" placeholder="Todo Name" type="text">
+                <textarea class="form-control desc" name="desc" placeholder="Description" rows="6"></textarea>
                 
                 <div class="clearfix">
                     <button type="button" onclick="document.getElementById('new-modal').style.display='none'" class="cancelbtn">Cancel</button>
