@@ -27,7 +27,7 @@
                 <div class="p">
                     <h1 class="todoname">{{ todo.key }}</h1>
                     <p class="tododesc">{{ todo.desc }}</p>
-                    <button class="icon-btn del" onclick="window.location.href='/delete?todo={{ todo.key }}';"><i class="fa-sharp fa-solid fa-trash del-ico"></i></button>
+                    <a class="icon-btn del" href="/delete?todo={{ todo.key }}"><i class="fa-sharp fa-solid fa-trash del-ico"></i></a>
                 </div>
             </li>
         {% endfor %}
